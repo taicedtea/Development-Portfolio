@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap" rel="stylesheet"> 
+    <!-- Google Fonts End -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <title>Tai Disla</title>
+</head>
+<body>
+    <!-- Responsive hamburger menu found at https://codepen.io/alvarotrigo/pen/MWEJEWG -->
+    <header class="top-nav">
+        <div id="logo">
+          Tai Disla
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+        <div class='menu-button'></div>
+      </label>
+        <ul class="menu">
+          <a href="#aboutMe"><li>About Me</li></a>
+          <a href="#projects"><li>Projects</li></a>
+          <a href="#contact"><li>Contact</li></a>
+        </ul>
+    </header>
+      <!-- End of hamburger menu -->
+
+    <main>
+        <!-- About me section -->
+        <section id="aboutMe">
+            <img src="assets/imgs/picOfMe.JPEG" alt="Picture of Tai"> 
+            <p id="intro">
+                Hello, my name is <span class="bold italic">Tai Disla</span> and I am a web developer with a passion for art & design. <br>In my free time I love to take pictures and visit museums!
+            </p>
+        </section>
+
+        <!-- Projects section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <!-- Newest project displayed here-->
+            <div id="latestProject">
+                <a href="https://taicedtea.github.io/bootcampChallenge_1_codeRefactor/" id="firstCardBackground">
+                    <article id="firstCard">
+                        <h3>Code Refractor</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    </article>
+                </a>
+            </div>
+            <!-- past projects displayed here -->
+            <div id="pastProjects">
+                <a href="https://taidisla.com/">
+                    <article class="card card1">
+                        <h3>Photography and Art Portfolio</h3>
+                        <p>This is a collection of some my art and photography, as well as a few of my web design work. </p>
+                    </article>
+                </a>
+                <a href="https://taidisla.com/photozineone/index1.html">
+                    <article class="card">
+                        <h3>Photozine One</h3>
+                        <p>This is a digital magazine I created to showcase my film photography. Please keep in mind this is for mobile only.</p>
+                    </article>
+                </a>
+                <a href="https://taidisla.com/photozineone/index1.html">
+                    <article class="card">
+                        <h3>Photozine One</h3>
+                        <p>This is a digital magazine I created to showcase my film photography. Please keep in mind this is for mobile only.</p>
+                    </article>
+                </a>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- <script src="assets/scripts.js"></script> -->
+</body>
+</html>

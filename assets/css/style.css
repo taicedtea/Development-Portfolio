@@ -1,0 +1,313 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+body { 
+    font-family:'Nunito', sans-serif;;
+}
+
+#logo {
+    font-size: 200%;
+    font-weight: 300;
+}
+
+.bold {
+    font-weight: 500;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Responsive hamburger menu found at https://codepen.io/alvarotrigo/pen/MWEJEWG */
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /*background-color: #00BAF0;*/
+    /* background: linear-gradient(90deg, rgb(42, 105, 41) 0%, rgb(50, 71, 50) 100%); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 8vh;
+    padding: 1em;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu > a {
+    margin: 0 1rem;
+    overflow: hidden;
+    color: rgb(37, 37, 37);
+    text-decoration: none;
+  }
+  
+  .menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  
+  .menu-button,
+  .menu-button::before,
+  .menu-button::after {
+    display: block;
+    background-color: rgb(37, 37, 37);
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+  }
+  
+  .menu-button::before {
+    content: '';
+    margin-top: -8px;
+  }
+  
+  .menu-button::after {
+    content: '';
+    margin-top: 8px;
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgb(255, 255, 255);
+  }
+  
+  #menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+  }
+  
+  @media (max-width: 700px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 10px;
+      margin-top: 50px;
+      left: 0;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      z-index: 1000;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: rgb(223, 223, 223);
+      background-color: #222;
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
+    }
+    .menu > a {
+        color:rgb(223, 223, 223);
+    }
+  }
+  /* End of hamburger menu styling */
+
+  /* About me Styling */
+#aboutMe {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    padding: 20px;
+    background-color: rgb(161, 193, 182);
+}
+
+#aboutMe img {
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+#intro {
+    position: relative;
+    font-size: 300%;
+    font-weight: 300;
+    width: 50%;
+    left: 5vw;
+}
+
+/* Projects styling */
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    width: 90vw;
+    align-items: center;
+    padding: 40px;
+    top: 50px;
+    left: 7.5vw;
+}
+
+#projects h2 {
+    font-size: 200%;
+    position: absolute;
+    top: -25px;
+    color: black;
+}
+
+/* Latest project styling */
+
+#latestProject a {
+    color: white;
+    text-decoration: none;
+}
+
+/* adds image background with filter to first card */
+#firstCard::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 50vw; 
+    height: 25vh;
+    background-image: url("../imgs/codeRefractorImg.png");
+    background-size: cover;
+    z-index: -99;
+    border-radius: 10px;
+    filter: brightness(.6) grayscale(50%) blur(2px);
+}
+
+#firstCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    width: 50vw;
+    height: 25vh;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    z-index: 999;
+}
+
+#firstCard:hover {
+    color: rgb(157, 214, 194);
+    transition: 200ms;
+}
+
+#firstCard h3 {
+    position: relative;
+    top: -20px;
+    font-size: 200%;
+}
+
+#firstCard p {
+    position: relative;
+    text-align: center;
+    font-size: 120%;
+}
+
+/* past project styling */
+#pastProjects {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 85vw;
+    z-index: 2;
+}
+
+#pastProjects a {
+    text-decoration: none;
+    color: white;
+}
+
+#pastProjects a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+#pastProjects a article h3{
+    text-decoration: none;
+    color: white;
+}
+
+/* adds background image to project */
+.card1:before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 350px; 
+    height: 25vh;
+    background-image: url("../imgs/artPortfolioImg.png");
+    background-size: cover;
+    z-index: -99;
+    border-radius: 10px;
+    filter: brightness(.6) grayscale(50%) blur(2px);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    margin: 20px;
+    width: 350px;
+    height: 25vh;
+    border-radius: 10px;
+}
+
+.card:hover {
+    color: green;
+}
+
+.card h3 {
+    position: relative;
+    top: -10px;
+    font-size: 120%;
+}
