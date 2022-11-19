@@ -1,3 +1,8 @@
+:root {
+  --lightGreen: rgb(161, 193, 182); 
+  --darkGrey: rgb(37, 37, 37); 
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -9,7 +14,16 @@ body {
     font-family:'Nunito', sans-serif;;
 }
 
+h2 {
+  font-size: 200%;
+  position: relative;
+  top: -25px;
+  color: black;
+}
+
 #logo {
+    position: relative;
+    left: 20px;
     font-size: 200%;
     font-weight: 300;
 }
@@ -46,7 +60,7 @@ body {
   .menu > a {
     margin: 0 1rem;
     overflow: hidden;
-    color: rgb(37, 37, 37);
+    color: var(--darkGrey);
     text-decoration: none;
   }
   
@@ -68,7 +82,7 @@ body {
   .menu-button::before,
   .menu-button::after {
     display: block;
-    background-color: rgb(37, 37, 37);
+    background-color: var(--darkGrey);
     position: absolute;
     height: 4px;
     width: 30px;
@@ -153,9 +167,12 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    height: auto;
+    width: auto;
+    margin: 5%;
     padding: 20px;
-    background-color: rgb(161, 193, 182);
+    background-color: var(--lightGreen);
+    border-radius: 20px;
 }
 
 #aboutMe img {
@@ -173,24 +190,17 @@ body {
     left: 5vw;
 }
 
-/* Projects styling */
+/* Projects container styling */
 #projects {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     position: relative;
-    width: 90vw;
     align-items: center;
+    justify-content: center;
     padding: 40px;
+    margin: 20px;
     top: 50px;
-    left: 7.5vw;
-}
-
-#projects h2 {
-    font-size: 200%;
-    position: absolute;
-    top: -25px;
-    color: black;
 }
 
 /* Latest project styling */
@@ -200,14 +210,14 @@ body {
     text-decoration: none;
 }
 
-/* adds image background with filter to first card */
+/* adds image background with filter to latest project, found at https://css-tricks.com/apply-a-filter-to-a-background-image/ */
 #firstCard::before {
     content: "";
     position: absolute;
     top: 0; 
     left: 0;
     width: 50vw; 
-    height: 25vh;
+    height: 35vh;
     background-image: url("../imgs/codeRefractorImg.png");
     background-size: cover;
     z-index: -99;
@@ -223,7 +233,7 @@ body {
     position: relative;
     top: 0;
     width: 50vw;
-    height: 25vh;
+    height: 35vh;
     padding: 10px;
     margin: 20px;
     border-radius: 10px;
@@ -232,8 +242,8 @@ body {
 }
 
 #firstCard:hover {
-    color: rgb(157, 214, 194);
-    transition: 200ms;
+    transform: scale(1.1);
+    transition: all .2s ease-in-out;
 }
 
 #firstCard h3 {
@@ -245,7 +255,8 @@ body {
 #firstCard p {
     position: relative;
     text-align: center;
-    font-size: 120%;
+    font-size: 110%;
+    width: 75%;
 }
 
 /* past project styling */
@@ -268,12 +279,43 @@ body {
     color: white;
 }
 
-#pastProjects a article h3{
+/* General project card styling */
+.card h3{
     text-decoration: none;
     color: white;
+    position: relative;
+    top: -10px;
+    font-size: 120%;
 }
 
-/* adds background image to project */
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 10px;
+  margin: 20px;
+  width: 350px;
+  height: 25vh;
+  border-radius: 10px;
+}
+
+.card p {
+  position: relative;
+  text-align: center;
+  font-size: 100%;
+  width: 75%;
+}
+
+.card:hover {
+  transition: all .2s ease-in-out; 
+  transform: scale(1.1);
+
+}
+
+/* adds filter to background image to projects, found at https://css-tricks.com/apply-a-filter-to-a-background-image/ */
 .card1:before {
     content: "";
     position: absolute;
@@ -281,33 +323,88 @@ body {
     left: 0;
     width: 350px; 
     height: 25vh;
-    background-image: url("../imgs/artPortfolioImg.png");
+    background-image: url("../imgs/photozineImg.png");
     background-size: cover;
     z-index: -99;
     border-radius: 10px;
     filter: brightness(.6) grayscale(50%) blur(2px);
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 1;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 10px;
-    margin: 20px;
-    width: 350px;
-    height: 25vh;
-    border-radius: 10px;
+.card2:before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 350px; 
+  height: 25vh;
+  background-image: url("../imgs/artPortfolioImg.png");
+  background-size: cover;
+  z-index: -99;
+  border-radius: 10px;
+  filter: brightness(.6) grayscale(50%) blur(2px);
 }
 
-.card:hover {
-    color: green;
+.comingSoon{
+  background: var(--lightGreen);
 }
 
-.card h3 {
-    position: relative;
-    top: -10px;
-    font-size: 120%;
+/* contact styling */
+#contact {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  top: 20px;
+  margin: 0;
+  padding: 50px;
+  background-color: var(--lightGreen);
 }
+
+#contact p {
+  font-size: 120%;
+  margin: 20px;
+}
+
+#contact ul {
+  text-align: center;
+}
+
+#contact ul li {
+  display: inline-block; /*makes ul horizontal*/
+}
+
+#contact a {
+  color: black;
+  text-decoration: none;
+  margin: 0 5px 0 5px;
+}
+
+.faStyling {
+  font-size: 35px;
+}
+
+#emailContact {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  margin: auto;
+}
+
+/* footer styling */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 0;
+  padding: 20px;
+  height: 100px;
+  background-color: var(--darkGrey);
+}
+
+footer p {
+  color: white;
+}
+
+/* mobile devices */
