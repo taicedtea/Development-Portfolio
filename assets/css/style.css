@@ -474,7 +474,7 @@ footer p {
 
   .card {
     width: 70vw;
-    height: 20vh;
+    height: 70vw;
     margin: 20px;
   }
 
@@ -484,7 +484,7 @@ footer p {
     top: 0; 
     left: 0;
     width: 70vw; 
-    height: 20vh;
+    height: 70vw;
     background-image: url("../imgs/artPortfolioImg.png");
     background-size: cover;
     z-index: -99;
@@ -498,7 +498,7 @@ footer p {
     top: 0; 
     left: 0;
     width: 70vw; 
-    height: 20vh;
+    height: 70vw;
     background-image: url("../imgs/photozineImg.png");
     background-size: cover;
     z-index: -99;
