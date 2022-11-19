@@ -191,6 +191,14 @@ h2 {
 }
 
 /* Projects container styling */
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
 #projects {
     display: flex;
     flex-wrap: wrap;
@@ -316,20 +324,6 @@ h2 {
 }
 
 /* adds filter to background image to projects, found at https://css-tricks.com/apply-a-filter-to-a-background-image/ */
-.card1:before {
-    content: "";
-    position: absolute;
-    top: 0; 
-    left: 0;
-    width: 350px; 
-    height: 25vh;
-    background-image: url("../imgs/photozineImg.png");
-    background-size: cover;
-    z-index: -99;
-    border-radius: 10px;
-    filter: brightness(.6) grayscale(50%) blur(2px);
-}
-
 .card2:before {
   content: "";
   position: absolute;
@@ -338,6 +332,20 @@ h2 {
   width: 350px; 
   height: 25vh;
   background-image: url("../imgs/artPortfolioImg.png");
+  background-size: cover;
+  z-index: -99;
+  border-radius: 10px;
+  filter: brightness(.6) grayscale(50%) blur(2px);
+}
+
+.card1:before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 350px; 
+  height: 25vh;
+  background-image: url("../imgs/photozineImg.png");
   background-size: cover;
   z-index: -99;
   border-radius: 10px;
@@ -408,3 +416,90 @@ footer p {
 }
 
 /* mobile devices */
+/* iPhone X-13 */
+@media screen and (max-width: 845px) {
+  #aboutMe img {
+    width: 80vw;
+    height: auto;
+  }
+  #intro {
+    width: 85%;
+    font-size: 130%;
+  }
+
+  h2 {
+    font-size: 150%;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  #projects {
+    text-align: center;
+    margin: 0 0 40px 0;
+    padding: 0;
+  }
+
+  #firstCard::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 80vw; 
+    height: 30vh;
+    background-image: url("../imgs/codeRefractorImg.png");
+    background-size: cover;
+    z-index: -99;
+    border-radius: 10px;
+    filter: brightness(.6) grayscale(50%) blur(2px);
+  }
+
+  #firstCard {
+    width: 80vw; 
+    height: 30vh;  
+  }
+
+  .card {
+    width: 60vw;
+    height: 20vh;
+    height: auto;
+    margin: 20px;
+  }
+
+  .card2:before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 60vw; 
+    height: 20vh;
+    background-image: url("../imgs/artPortfolioImg.png");
+    background-size: cover;
+    z-index: -99;
+    border-radius: 10px;
+    filter: brightness(.6) grayscale(50%) blur(2px);
+  }
+
+  .card1:before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 60vw; 
+    height: 20vh;
+    background-image: url("../imgs/photozineImg.png");
+    background-size: cover;
+    z-index: -99;
+    border-radius: 10px;
+    filter: brightness(.6) grayscale(50%) blur(2px);
+  }
+
+  .comingSoon {
+    height: 20vh;
+  }
+}
