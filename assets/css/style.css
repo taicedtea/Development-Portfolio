@@ -418,6 +418,10 @@ footer p {
 /* mobile devices */
 /* iPhone X-13 */
 @media screen and (max-width: 845px) {
+  #aboutMe {
+    height: 70vh;
+  }
+
   #aboutMe img {
     width: 80vw;
     height: auto;
@@ -425,6 +429,7 @@ footer p {
   #intro {
     width: 85%;
     font-size: 130%;
+    left: 0;
   }
 
   h2 {
@@ -440,9 +445,11 @@ footer p {
   }
 
   #projects {
+    position: static;
     text-align: center;
-    margin: 0 0 40px 0;
+    margin: 60px 0 40px 0;
     padding: 0;
+    top: 40px;
   }
 
   #firstCard::before {
@@ -461,13 +468,13 @@ footer p {
 
   #firstCard {
     width: 80vw; 
-    height: 30vh;  
+    height: 30vh;
+    margin-top: 0;  
   }
 
   .card {
-    width: 60vw;
+    width: 70vw;
     height: 20vh;
-    height: auto;
     margin: 20px;
   }
 
@@ -476,7 +483,7 @@ footer p {
     position: absolute;
     top: 0; 
     left: 0;
-    width: 60vw; 
+    width: 70vw; 
     height: 20vh;
     background-image: url("../imgs/artPortfolioImg.png");
     background-size: cover;
@@ -490,7 +497,7 @@ footer p {
     position: absolute;
     top: 0; 
     left: 0;
-    width: 60vw; 
+    width: 70vw; 
     height: 20vh;
     background-image: url("../imgs/photozineImg.png");
     background-size: cover;
@@ -501,5 +508,38 @@ footer p {
 
   .comingSoon {
     height: 20vh;
+    top: 20px;
+  }
+
+  #contact {
+    height: 25vh;
+    position: static;
+    padding: 20px 10px 20px 10px;
+  }
+
+  #contact h2 {
+    font-size: 120%;
+    top: 0;
+  }
+
+  #contact p {
+    font-size: 100%;
+    font-weight: 100;
+    width: 100%;
+    margin: 5px 0 5px 0;
+  }
+
+  #contact ul {
+    padding: 20px 0 0 0;
+  }
+
+  #emailContact {
+    top: 5px;
+  }
+
+  footer {
+    position: static;
+    height: 60px;
+    font-size: 100%;
   }
 }
