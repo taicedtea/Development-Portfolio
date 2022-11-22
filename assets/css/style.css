@@ -417,7 +417,7 @@ footer p {
 
 /* mobile devices */
 /* iPhone X-13 */
-@media screen and (max-width: 845px) {
+@media screen and (max-width: 550px) {
   #aboutMe {
     height: 70vh;
   }
