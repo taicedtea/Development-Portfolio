@@ -356,6 +356,10 @@ h2 {
   background: var(--lightGreen);
 }
 
+.comingSoon:hover {
+  transform: none;
+}
+
 /* contact styling */
 #contact {
   display: flex;
