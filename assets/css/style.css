@@ -226,7 +226,7 @@ h2 {
     left: 0;
     width: 50vw; 
     height: 35vh;
-    background-image: url("../imgs/justReadIt.png");
+    background-image: url("../imgs/recollectionApp.jpg");
     background-size: cover;
     z-index: -99;
     border-radius: 10px;
@@ -324,6 +324,20 @@ h2 {
 }
 
 /* adds filter to background image to projects, found at https://css-tricks.com/apply-a-filter-to-a-background-image/ */
+.card4:before {
+  content: "";
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 350px; 
+  height: 25vh;
+  background-image: url("../imgs/justReadIt.png");
+  background-size: cover;
+  z-index: -99;
+  border-radius: 10px;
+  filter: brightness(.6) grayscale(50%) blur(2px);
+}
+
 .card3:before {
   content: "";
   position: absolute;
