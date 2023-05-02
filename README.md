@@ -2,3 +2,5 @@
 A simple website to share apps I have created in my development journey. Constantly growing.
 
 Live site: [here](https://taicedtea.github.io/Development-Portfolio/)
+
+![image](/assets/imgs/portfolioScreenshot.png)
